@@ -27,7 +27,7 @@ export default function Main (){
             setData_nascimento('');
             setValor('');
             setParcelas('');
-        }
+        };
 
         const data = {
             CPF,
@@ -35,7 +35,7 @@ export default function Main (){
             data_nascimento,
             valor,
             parcelas,
-        }
+        };
         const response = await api.post('/simular',data);
         if(typeof(response.data) != 'object'){
             setError(response.data);
