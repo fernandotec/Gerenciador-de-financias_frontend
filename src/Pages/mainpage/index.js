@@ -11,6 +11,7 @@ export default function Main (){
     const[valor,setValor] = useState();
     const[error,setError] = useState('----');
     const[color,setColor] = useState('darkred');
+    const[error1,setError1] = useState('----');
     const[emprestimoDATA,setEmprestimoDATA] = useState({});
     const[display,setDisplay] = useState('0');
 
@@ -30,8 +31,8 @@ export default function Main (){
         };
 
         const data = {
-            CPF,
-            UF,
+            cpf:CPF,
+            uf:UF,
             data_nascimento,
             valor,
             parcelas,
@@ -54,8 +55,17 @@ export default function Main (){
         }
     }
     function Emprestimo(){
-        function handleEmprestimo(e){
+        async function handleEmprestimo(e){
             e.preventDefault();
+            const data = {
+                CPF,
+                UF,
+                data_nascimento,
+                valor,
+                parcelas,
+            };
+            const response = await api.post('/',data);
+            setError1(response.data)
         }
 
         return(
@@ -103,9 +113,12 @@ export default function Main (){
 
                     </div>
                 </div>
-                <form>
+                <form onSubmit={handleEmprestimo} > 
                     <button type='submit'>Efetivar o empréstimo</button>
                 </form>
+                <div className="message">
+                    <p style={{color:color}}>{error1}</p>
+                </div>  
                 
             </div>
         )
