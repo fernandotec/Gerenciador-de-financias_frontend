@@ -4,11 +4,11 @@ import './style.css';
 
 export default function Main (){
     var date = new Date();
-    let[CPF,setCPF] = useState('12312312312');
-    const[UF,setUF] = useState('MG');
-    const[data_nascimento,setData_nascimento] = useState('08/04/2004');
-    const[parcelas,setParcelas] = useState(5);
-    const[valor,setValor] = useState(59000);
+    let[CPF,setCPF] = useState('');
+    const[UF,setUF] = useState('');
+    const[data_nascimento,setData_nascimento] = useState('');
+    const[parcelas,setParcelas] = useState();
+    const[valor,setValor] = useState();
     const[error,setError] = useState('----');
     const[color,setColor] = useState('darkred');
     const[emprestimoDATA,setEmprestimoDATA] = useState({});
@@ -54,6 +54,9 @@ export default function Main (){
         }
     }
     function Emprestimo(){
+        function handleEmprestimo(e){
+            e.preventDefault();
+        }
 
         return(
             <div style={{opacity:display}} className="emprestimo-container">
@@ -100,6 +103,9 @@ export default function Main (){
 
                     </div>
                 </div>
+                <form>
+                    <button type='submit'>Efetivar o empréstimo</button>
+                </form>
                 
             </div>
         )
