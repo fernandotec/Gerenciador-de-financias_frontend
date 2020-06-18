@@ -1,0 +1,95 @@
+.components-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.components-container h1 {
+    color: gray;
+    opacity: 0.7;
+}
+.components-container form {
+    height: 45vh;
+}
+
+.value-months {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.value-months * {
+    width: 39%;
+    margin: 0px 3px 0px 3px;
+}
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 7%;
+    border: 2px dashed lightgray;
+    border-radius: 8px;
+}
+.message p {
+    text-align: center;
+    font-weight: bold;
+}
+.emprestimo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin-top: 100px;
+    background-color: white;
+    box-shadow: 0px 5px 20px 5px gray;
+}
+.emprestimo-container .headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.emprestimo-container .headers * {
+    margin: 0px 20px 0px 20px;
+}
+.emprestimo-container .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.emprestimo-container .header p {
+    opacity: 0.8;
+    color: gray;
+}
+.parcelas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    margin-top: 100px;
+    background-color: white;
+}
+.parcelas-single {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 45px;
+    box-shadow: 0px 3px 10px 1px gray;
+    margin: 7px 7px;
+    border-radius: 3px;
+}
+.parcelas-single p {
+    margin-left: 20px;
+    text-indent: 20px;
+}
+.parcelas-single h4 {
+    margin-right: 20px;
+}
